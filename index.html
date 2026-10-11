@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muhammad Talib Raza | Environmental Engineer</title>
+<meta name="description" content="Environmental Engineering Graduate | Wastewater Treatment, Water Reuse, HSE, Sustainability, Water Quality Analysis" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-900:#0b2c2c;
+    --teal-800:#0f3d3e;
+    --teal-700:#14595a;
+    --teal-600:#1b7a7b;
+    --teal-500:#219a9b;
+    --aqua:#4fd1c5;
+    --leaf:#7ac74f;
+    --sand:#f6f9f8;
+    --ink:#0f1b1b;
+    --muted:#5b6b6b;
+    --white:#ffffff;
+    --shadow:0 10px 30px rgba(11,44,44,.08);
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink); background:var(--white); line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1120px;margin:0 auto;padding:0 22px;}
+
+  /* NAV */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #e6efee;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--teal-800);letter-spacing:.2px;}
+  .brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--aqua),var(--leaf));}
+  nav ul{display:flex;gap:26px;list-style:none;font-size:.92rem;font-weight:500;color:var(--muted);}
+  nav a:hover{color:var(--teal-600);}
+  .menu-btn{display:none;background:none;border:0;font-size:1.5rem;color:var(--teal-800);cursor:pointer;}
+
+  /* HERO */
+  .hero{
+    background:
+      radial-gradient(1200px 500px at 85% -10%, rgba(79,209,197,.18), transparent 60%),
+      radial-gradient(900px 500px at 0% 110%, rgba(122,199,79,.12), transparent 55%),
+      linear-gradient(180deg,#f6fbfa, #ffffff);
+    padding:70px 0 60px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:center;}
+  .eyebrow{
+    display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--teal-600);
+    background:rgba(79,209,197,.14);padding:6px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  h1{font-size:clamp(2rem,4vw,3rem);line-height:1.15;font-weight:800;color:var(--teal-900);letter-spacing:-.5px;}
+  h1 span{background:linear-gradient(120deg,var(--teal-600),var(--leaf));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .tagline{margin-top:16px;font-size:1.05rem;color:var(--muted);max-width:560px;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:999px;font-weight:600;font-size:.92rem;
+    transition:.25s ease;border:1.5px solid transparent;
+  }
+  .btn-primary{background:var(--teal-700);color:#fff;box-shadow:0 6px 18px rgba(20,89,90,.25);}
+  .btn-primary:hover{background:var(--teal-600);transform:translateY(-2px);}
+  .btn-ghost{border-color:#cfe3e1;color:var(--teal-800);background:#fff;}
+  .btn-ghost:hover{border-color:var(--teal-600);color:var(--teal-600);}
+  .photo-wrap{position:relative;justify-self:center;}
+  .photo-wrap::before{
+    content:"";position:absolute;inset:-14px;border-radius:24px;
+    background:linear-gradient(135deg,var(--aqua),var(--leaf));opacity:.18;z-index:0;
+  }
+  .photo-wrap img{
+    position:relative;z-index:1;width:280px;height:340px;object-fit:cover;
+    border-radius:20px;box-shadow:var(--shadow);border:4px solid #fff;
+  }
+  .quick-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .chip{
+    font-size:.8rem;font-weight:500;color:var(--teal-800);
+    background:#eef7f6;border:1px solid #dcefec;padding:6px 12px;border-radius:999px;
+  }
+
+  /* SECTIONS */
+  section{padding:64px 0;}
+  section:nth-of-type(even){background:var(--sand);}
+  .section-head{margin-bottom:36px;}
+  .section-head h2{
+    font-size:1.7rem;font-weight:800;color:var(--teal-900);letter-spacing:-.3px;
+    display:inline-flex;align-items:center;gap:12px;
+  }
+  .section-head h2::before{
+    content:"";width:8px;height:26px;border-radius:4px;
+    background:linear-gradient(180deg,var(--aqua),var(--leaf));
+  }
+  .section-head p{color:var(--muted);margin-top:8px;font-size:.95rem;max-width:720px;}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:2fr 1fr;gap:40px;}
+  .about-text p{color:#3c4a4a;margin-bottom:14px;font-size:.98rem;}
+  .info-card{
+    background:#fff;border:1px solid #e6efee;border-radius:var(--radius);
+    padding:22px;box-shadow:var(--shadow);height:fit-content;
+  }
+  .info-card h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-600);margin-bottom:14px;}
+  .info-card ul{list-style:none;font-size:.9rem;color:#3c4a4a;}
+  .info-card li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed #e6efee;}
+  .info-card li:last-child{border-bottom:0;}
+  .info-card li span:first-child{color:var(--muted);}
+
+  /* SKILLS */
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+  .skill-card{
+    background:#fff;border:1px solid #e6efee;border-radius:var(--radius);
+    padding:22px;box-shadow:var(--shadow);transition:.25s;
+  }
+  .skill-card:hover{transform:translateY(-4px);border-color:var(--aqua);}
+  .skill-card h3{font-size:1rem;color:var(--teal-800);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .skill-card h3 .ic{
+    width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font-size:.85rem;
+    background:linear-gradient(135deg,rgba(79,209,197,.2),rgba(122,199,79,.2));color:var(--teal-700);
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:7px;}
+  .tag{font-size:.78rem;background:#eef7f6;color:var(--teal-800);padding:5px 10px;border-radius:8px;border:1px solid #dcefec;}
+
+  /* EXPERIENCE */
+  .timeline{position:relative;padding-left:28px;}
+  .timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--aqua),var(--leaf));border-radius:2px;}
+  .tl-item{position:relative;margin-bottom:32px;}
+  .tl-item::before{
+    content:"";position:absolute;left:-26px;top:6px;width:14px;height:14px;border-radius:50%;
+    background:#fff;border:3px solid var(--teal-600);
+  }
+  .tl-item h3{font-size:1.05rem;color:var(--teal-900);font-weight:700;}
+  .tl-meta{font-size:.85rem;color:var(--teal-600);font-weight:600;margin:2px 0 8px;}
+  .tl-item ul{list-style:none;color:#3c4a4a;font-size:.92rem;}
+  .tl-item ul li{position:relative;padding-left:18px;margin-bottom:5px;}
+  .tl-item ul li::before{content:"▸";position:absolute;left:0;color:var(--leaf);font-weight:700;}
+
+  /* PROJECTS */
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+  .project-card{
+    background:#fff;border:1px solid #e6efee;border-radius:var(--radius);overflow:hidden;
+    box-shadow:var(--shadow);transition:.25s;display:flex;flex-direction:column;
+  }
+  .project-card:hover{transform:translateY(-5px);}
+  .project-head{
+    background:linear-gradient(135deg,var(--teal-700),var(--teal-500));color:#fff;padding:18px 20px;
+  }
+  .project-head h3{font-size:1rem;font-weight:700;line-height:1.35;}
+  .project-head .date{font-size:.78rem;opacity:.85;margin-top:4px;}
+  .project-body{padding:18px 20px;font-size:.9rem;color:#3c4a4a;}
+  .project-body p{margin-bottom:10px;}
+  .project-body strong{color:var(--teal-800);}
+  .metric-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;}
+  .metric{
+    background:#eef7f6;border:1px solid #dcefec;border-radius:10px;padding:10px 14px;flex:1;min-width:110px;text-align:center;
+  }
+  .metric .num{font-size:1.15rem;font-weight:800;color:var(--teal-700);}
+  .metric .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;}
+
+  /* PUBLICATIONS */
+  .pub-list{display:grid;gap:16px;}
+  .pub{
+    background:#fff;border:1px solid #e6efee;border-left:4px solid var(--leaf);
+    border-radius:10px;padding:18px 20px;box-shadow:var(--shadow);transition:.2s;
+  }
+  .pub:hover{border-left-color:var(--teal-600);}
+  .pub h4{font-size:.98rem;color:var(--teal-900);font-weight:700;margin-bottom:6px;}
+  .pub .venue{font-size:.83rem;color:var(--teal-600);font-weight:600;}
+  .pub .status{display:inline-block;font-size:.72rem;font-weight:600;background:rgba(122,199,79,.18);color:#3f7a1f;padding:3px 9px;border-radius:6px;margin-top:8px;}
+
+  /* CERTIFICATIONS */
+  .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+  .cert{
+    background:#fff;border:1px solid #e6efee;border-radius:10px;padding:14px 16px;
+    font-size:.88rem;box-shadow:var(--shadow);display:flex;gap:10px;align-items:flex-start;transition:.2s;
+  }
+  .cert:hover{border-color:var(--aqua);}
+  .cert .badge{
+    flex:0 0 34px;height:34px;border-radius:9px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--teal-600),var(--leaf));color:#fff;font-weight:700;font-size:.75rem;
+  }
+  .cert .name{font-weight:600;color:var(--teal-900);line-height:1.35;}
+  .cert .issuer{font-size:.78rem;color:var(--muted);margin-top:2px;}
+
+  /* LEADERSHIP */
+  .lead-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+  .lead{
+    background:#fff;border:1px solid #e6efee;border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);
+  }
+  .lead h4{font-size:.95rem;color:var(--teal-900);font-weight:700;}
+  .lead .role{font-size:.82rem;color:var(--teal-600);font-weight:600;margin:2px 0 6px;}
+  .lead .org{font-size:.83rem;color:var(--muted);}
+
+  /* CONTACT */
+  .contact-wrap{
+    background:linear-gradient(135deg,var(--teal-900),var(--teal-700));color:#fff;
+    border-radius:20px;padding:50px 40px;text-align:center;box-shadow:var(--shadow);
+  }
+  .contact-wrap h2{font-size:1.8rem;font-weight:800;margin-bottom:10px;}
+  .contact-wrap p{opacity:.85;max-width:560px;margin:0 auto 26px;}
+  .contact-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .contact-links a{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+    padding:11px 20px;border-radius:999px;font-weight:600;font-size:.9rem;transition:.25s;
+  }
+  .contact-links a:hover{background:rgba(255,255,255,.22);transform:translateY(-2px);}
+
+  footer{text-align:center;padding:28px 0;font-size:.82rem;color:var(--muted);border-top:1px solid #e6efee;}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;text-align:center;}
+    .tagline{margin-left:auto;margin-right:auto;}
+    .cta-row,.quick-facts{justify-content:center;}
+    .photo-wrap{order:-1;}
+    .photo-wrap img{width:230px;height:280px;}
+    .about-grid{grid-template-columns:1fr;}
+  }
+  @media(max-width:700px){
+    nav ul{display:none;}
+    .menu-btn{display:block;}
+    nav ul.open{
+      display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;
+      background:#fff;padding:16px 22px;border-bottom:1px solid #e6efee;gap:14px;
+    }
+    section{padding:48px 0;}
+    .contact-wrap{padding:36px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand"><span class="dot"></span> Muhammad Talib Raza</a>
+    <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="navlinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Environmental Engineer</span>
+      <h1>Muhammad Talib Raza<br><span>Wastewater • Water Reuse • Sustainability</span></h1>
+      <p class="tagline">
+        Environmental Engineering graduate from UET Taxila with hands-on experience in wastewater treatment,
+        water quality analysis, HSE compliance, and sustainable environmental solutions. Passionate about
+        translating research into practical, impact-driven engineering.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Get in Touch →</a>
+        <a class="btn btn-ghost" href="#projects">View Projects</a>
+      </div>
+      <div class="quick-facts">
+        <span class="chip">🎓 B.Sc. Environmental Engineering — UET Taxila</span>
+        <span class="chip">📍 Islamabad, Pakistan</span>
+        <span class="chip">💧 Wastewater & Water Reuse</span>
+        <span class="chip">🛡️ HSE & Risk Assessment</span>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <img src="talib.jpg" alt="Muhammad Talib Raza" />
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <h2>About Me</h2>
+      <p>A concise snapshot of who I am, what I do, and where I’m headed.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I am an Environmental Engineering graduate from the University of Engineering and Technology (UET) Taxila
+          with a strong foundation in environmental management, wastewater and solid waste management, HSE practices,
+          environmental regulations, and sustainability. I am familiar with NEQS standards, industrial effluent management,
+          and environmental compliance.
+        </p>
+        <p>
+          My undergraduate research focused on optimizing a coagulation–flocculation and chemical oxidation process for
+          beverage industrial effluent, achieving final COD and BOD₅ concentrations of 115 mg/L and 68 mg/L respectively —
+          meeting national discharge standards as verified by an accredited laboratory.
+        </p>
+        <p>
+          I have practical exposure to water and wastewater analysis (COD, BOD₅, solids, turbidity, jar testing), GIS mapping,
+          EPANET, and Life Cycle Assessment (ISO 14040/14044). I have contributed to multiple accepted conference papers
+          on wastewater sustainability, environmental risk assessment, and cleaner production.
+        </p>
+        <p>
+          I am eager to apply technical and analytical skills to support safe, sustainable, and environmentally responsible
+          operations across industries, consultancies, utilities, and research organizations.
+        </p>
+      </div>
+      <aside class="info-card">
+        <h4>Quick Info</h4>
+        <ul>
+          <li><span>Location</span><span>Islamabad, Pakistan</span></li>
+          <li><span>Degree</span><span>B.Sc. Env. Engineering</span></li>
+          <li><span>University</span><span>UET Taxila</span></li>
+          <li><span>CGPA</span><span>3.13 / 4.00</span></li>
+          <li><span>Focus</span><span>Wastewater & Reuse</span></li>
+          <li><span>Languages</span><span>English, Urdu</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head">
+      <h2>Skills & Expertise</h2>
+      <p>Technical, software, and professional competencies developed through coursework, research, and internships.</p>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3><span class="ic">💧</span> Wastewater & Water</h3>
+        <div class="tags">
+          <span class="tag">Wastewater Treatment Design</span>
+          <span class="tag">Sewerage System Modeling</span>
+          <span class="tag">Industrial Effluent Assessment</span>
+          <span class="tag">Water Quality Analysis</span>
+          <span class="tag">Jar Testing</span>
+          <span class="tag">COD / BOD₅</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ic">🛡️</span> HSE & Compliance</h3>
+        <div class="tags">
+          <span class="tag">HSE Compliance Monitoring</span>
+          <span class="tag">Risk Assessment</span>
+          <span class="tag">COSHH</span>
+          <span class="tag">PPE Management</span>
+          <span class="tag">Environmental Auditing</span>
+          <span class="tag">NEQS Standards</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ic">🌍</span> Sustainability</h3>
+        <div class="tags">
+          <span class="tag">Life Cycle Assessment</span>
+          <span class="tag">EIA</span>
+          <span class="tag">Carbon Management</span>
+          <span class="tag">Solid Waste Management</span>
+          <span class="tag">ISO 14001</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ic">🖥️</span> Software & Tools</h3>
+        <div class="tags">
+          <span class="tag">ArcGIS</span>
+          <span class="tag">EPANET</span>
+          <span class="tag">MS Excel</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">MS Office</span>
+          <span class="tag">C++</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ic">📋</span> Professional</h3>
+        <div class="tags">
+          <span class="tag">Technical Reporting</span>
+          <span class="tag">Site Supervision</span>
+          <span class="tag">Project Coordination</span>
+          <span class="tag">Team Leadership</span>
+          <span class="tag">Regulatory Understanding</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3><span class="ic">🧪</span> Analysis & Modeling</h3>
+        <div class="tags">
+          <span class="tag">Landfill Estimation</span>
+          <span class="tag">Process Safety</span>
+          <span class="tag">Monte Carlo Simulation</span>
+          <span class="tag">Risk Modeling</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <h2>Experience</h2>
+      <p>Professional roles and internships across industry, utilities, and sustainability programs.</p>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <h3>Environmental Expert</h3>
+        <div class="tl-meta">ARAR Group of Companies · Aug 2026 – Present · Lahore, Pakistan</div>
+        <ul>
+          <li>Supporting environmental compliance and sustainability initiatives across group operations.</li>
+          <li>Contributing to environmental monitoring, reporting, and regulatory alignment.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <h3>Sustainability Intern</h3>
+        <div class="tl-meta">PRGMEA · Jun 2026 · Lahore, Pakistan</div>
+        <ul>
+          <li>Completed a focused internship on sustainability, climate change, carbon management, and environmental responsibility.</li>
+          <li>Participated in professional development sessions led by environmental and industry experts.</li>
+          <li>Collaborated on climate solutions and sustainability initiatives, including the CO₂ Talks Initiative with GCU Lahore.</li>
+          <li>Strengthened knowledge of environmental stewardship, sustainability reporting, and carbon awareness.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <h3>President — Environmental & Horticultural Society</h3>
+        <div class="tl-meta">UET Taxila · Sep 2025 – Jun 2026 · Taxila, Pakistan</div>
+        <ul>
+          <li>Led student-led environmental initiatives, awareness campaigns, and campus sustainability activities.</li>
+          <li>Coordinated teams, events, and outreach programs across the department and university.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <h3>Summer Intern</h3>
+        <div class="tl-meta">Punjab WASA (Water & Sanitation Agency) · Jun 2025 – Jul 2025 · Multan, Pakistan</div>
+        <ul>
+          <li>Assisted in monitoring sewerage and wastewater disposal systems to ensure operational efficiency and regulatory compliance.</li>
+          <li>Conducted GIS-based mapping and spatial analysis of sewerage infrastructure for improved planning.</li>
+          <li>Supported HSE compliance monitoring by ensuring adherence to safety standards during field operations.</li>
+          <li>Observed wastewater treatment processes and identified operational challenges in municipal systems.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <h2>Projects & Research</h2>
+      <p>Applied research and engineering work with measurable environmental outcomes.</p>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-head">
+          <h3>Process Optimization for Effective BOD & COD Removal in Beverage Industrial Effluent</h3>
+          <div class="date">Sep 2025 – Jun 2026 · Final Year Project · UET Taxila</div>
+        </div>
+        <div class="project-body">
+          <p><strong>Objective:</strong> Reduce BOD and COD in beverage industry wastewater using physicochemical treatment.</p>
+          <p><strong>Problem:</strong> After anaerobic treatment, effluent still contained 980 mg/L COD and 427 mg/L BOD₅ — well above discharge limits.</p>
+          <p><strong>Approach:</strong> Optimized pH and coagulant dosing, followed by oxidative polishing.</p>
+          <div class="metric-row">
+            <div class="metric"><div class="num">88%</div><div class="lbl">COD Removal</div></div>
+            <div class="metric"><div class="num">84%</div><div class="lbl">BOD₅ Removal</div></div>
+            <div class="metric"><div class="num">115</div><div class="lbl">mg/L Final COD</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-head">
+          <h3>Designing an AI-Powered EHS Risk Calculator: A Hybrid Computational Model</h3>
+          <div class="date">Accepted · 8th Annual Scientific Conference (2026), RMU</div>
+        </div>
+        <div class="project-body">
+          <p>An AI-assisted Environmental, Health & Safety risk calculator integrating probabilistic modeling, Monte Carlo simulation, sensitivity analysis, and a rule-based expert system.</p>
+          <p>Aims to improve consistency, transparency, and reliability of industrial risk assessment.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-head">
+          <h3>Comparative LCA of Conventional vs. ZDHC-Compliant Textile Wastewater Treatment</h3>
+          <div class="date">Presented · CSCE’26, CUST Islamabad</div>
+        </div>
+        <div class="project-body">
+          <p>Life Cycle Assessment comparing environmental performance of conventional and Zero Discharge of Hazardous Chemicals (ZDHC)-compliant textile wastewater treatment systems.</p>
+          <p>Supports cleaner production and sustainable wastewater management in the textile sector.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="container">
+    <div class="section-head">
+      <h2>Publications & Conferences</h2>
+      <p>Peer-reviewed contributions to environmental engineering and sustainability research.</p>
+    </div>
+    <div class="pub-list">
+
+      <div class="pub">
+        <h4>Comparative Life Cycle Assessment of Conventional and ZDHC-Compliant Textile Wastewater Treatment Systems</h4>
+        <div class="venue">8th Conference on Sustainability in Civil Engineering (CSCE’26), CUST Islamabad · Aug 2026</div>
+        <span class="status">Presented</span>
+      </div>
+
+      <div class="pub">
+        <h4>Designing an AI-Powered Environmental, Health and Safety Risk Calculator: A Hybrid Computational Model</h4>
+        <div class="venue">8th Annual Scientific Conference (2026), Rawalpindi Medical University (RMU) · May 2026</div>
+        <span class="status">Accepted</span>
+      </div>
+
+      <div class="pub">
+        <h4>Assessing the Validity of Compliance Monitoring Data for River Water-Quality Modelling: A Conservative-Tracer Approach</h4>
+        <div class="venue">2nd International Conference on Climate Change, Environment, and Sustainability (13CES-26), 2026</div>
+        <span class="status">Accepted</span>
+      </div>
+
+      <div class="pub">
+        <h4>Water Quality Status and Alkalinity-Limited Ferric Chloride Coagulation of the Mohra Morado Stream, Taxila</h4>
+        <div class="venue">2nd International Conference on Climate Change, Environment, and Sustainability (13CES-26), 2026</div>
+        <span class="status">Accepted</span>
+      </div>
+
+      <div class="pub">
+        <h4>Mass-Based Comparative Life Cycle Assessment of PET Bottles, Aluminium Cans, and Tetra Pak Cartons for Beverage Packaging</h4>
+        <div class="venue">2nd International Conference on Climate Change, Environment, and Sustainability (13CES-26), 2026</div>
+        <span class="status">Accepted</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-head">
+      <h2>Licenses & Certifications</h2>
+      <p>Continuous professional development across HSE, sustainability, environmental management, and process safety.</p>
+    </div>
+    <div class="cert-grid">
+
+      <div class="cert"><div class="badge">ADB</div><div><div class="name">Building Effective Systems for On-site Sanitation Management</div><div class="issuer">Asian Development Bank Institute · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">ADB</div><div><div class="name">Achieving Sustainable Development Goals on Water and Sanitation</div><div class="issuer">Asian Development Bank Institute · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">ADB</div><div><div class="name">Climate Change and Sovereign Risk</div><div class="issuer">Asian Development Bank Institute · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">ISO</div><div><div class="name">ISO 14001:2015 Environmental Management System Awareness</div><div class="issuer">The Knights of Safety Academy · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">ISO</div><div><div class="name">ISO 14001:2026 Awareness</div><div class="issuer">Safety-Verse & The Knights of Safety Academy · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">ISO</div><div><div class="name">ISO 45004:2024 Awareness Course</div><div class="issuer">Safety-Verse & The Knights of Safety Academy · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">PPE</div><div><div class="name">Personal Protective Equipment (PPE)</div><div class="issuer">The Knights of Safety Academy · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">TR</div><div><div class="name">Task Risk Assessment Basics for the Accidental Health and Safety Officer</div><div class="issuer">The Knights of Safety Academy · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">COS</div><div><div class="name">COSHH Risk Assessor Certification™</div><div class="issuer">The Knights of Safety Academy · Aug 2026</div></div></div>
+
+      <div class="cert"><div class="badge">🔥</div><div><div class="name">Fire and Explosion Hazards Analysis</div><div class="issuer">Coursera · Dec 2025</div></div></div>
+
+      <div class="cert"><div class="badge">⚗</div><div><div class="name">Chemical Hazards and Process Safety Specialization</div><div class="issuer">Coursera · Dec 2025</div></div></div>
+
+      <div class="cert"><div class="badge">UC</div><div><div class="name">Predictive Models for Toxic Chemical Releases</div><div class="issuer">University of California, Davis · Aug 2025</div></div></div>
+
+      <div class="cert"><div class="badge">UC</div><div><div class="name">Introduction to Process Safety and Risk Analysis</div><div class="issuer">University of California, Davis · Jul 2025</div></div></div>
+
+      <div class="cert"><div class="badge">DTU</div><div><div class="name">Global Environmental Management</div><div class="issuer">Technical University of Denmark · Jul 2025</div></div></div>
+
+      <div class="cert"><div class="badge">OSHA</div><div><div class="name">Introduction to OSHA: Safety Standards and Compliance</div><div class="issuer">Coursera · Jul 2025</div></div></div>
+
+      <div class="cert"><div class="badge">UM</div><div><div class="name">Environmental Health: The Foundation of Global Public Health</div><div class="issuer">University of Michigan · Jul 2025</div></div></div>
+
+      <div class="cert"><div class="badge">HRCI</div><div><div class="name">Compliance and Risk Management</div><div class="issuer">HRCI · Jul 2025</div></div></div>
+
+      <div class="cert"><div class="badge">UD</div><div><div class="name">Safety Leadership: Industry Workplace Health and Safety 2.0</div><div class="issuer">Udemy · Jun 2025</div></div></div>
+
+      <div class="cert"><div class="badge">BI</div><div><div class="name">Quality Improvement and Management</div><div class="issuer">Board Infinity · Jun 2025</div></div></div>
+
+      <div class="cert"><div class="badge">L&T</div><div><div class="name">Utilities, Safety & Environmental Care in Oil & Gas Industry</div><div class="issuer">L&T EduTech · Jun 2025</div></div></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <div class="container">
+    <div class="section-head">
+      <h2>Leadership & Volunteering</h2>
+      <p>Driving environmental awareness, student engagement, and community service.</p>
+    </div>
+    <div class="lead-grid">
+
+      <div class="lead">
+        <h4>Environmental & Horticultural Society, UET Taxila</h4>
+        <div class="role">President · Sep 2025 – Jun 2026</div>
+        <div class="org">Leading environmental initiatives and campus sustainability programs.</div>
+      </div>
+
+      <div class="lead">
+        <h4>Green Youth Club, UET Taxila</h4>
+        <div class="role">Co-Director · Oct 2024 – Apr 2025</div>
+        <div class="org">Coordinated youth-led green initiatives and awareness drives.</div>
+      </div>
+
+      <div class="lead">
+        <h4>Society of Environmental Engineers (SEE), UET Taxila</h4>
+        <div class="role">Joint Secretary & Promotion Co-Director · Sep 2024 – Mar 2025</div>
+        <div class="org">Organized events, outreach, and departmental engagement.</div>
+      </div>
+
+      <div class="lead">
+        <h4>Institute of Transportation Engineers (ITE), UET Taxila</h4>
+        <div class="role">Finance Head · Sep 2022 – May 2023</div>
+        <div class="org">Managed budgets and financial planning for chapter activities.</div>
+      </div>
+
+      <div class="lead">
+        <h4>Umeed-e-Subh Welfare Society</h4>
+        <div class="role">Co-Head · Sep 2022 – Apr 2023</div>
+        <div class="org">Led community welfare and volunteer activities.</div>
+      </div>
+
+      <div class="lead">
+        <h4>National Cleaner Production Centre (NCPC)</h4>
+        <div class="role">Volunteer · May 2022</div>
+        <div class="org">Supported cleaner production and environmental service initiatives.</div>
+      </div>
+
+      <div class="lead">
+        <h4>UET Taxila — Environmental Awareness Campaign</h4>
+        <div class="role">Student Volunteer · May 2024</div>
+        <div class="org">Engaged prospective students and families on sustainability and campus environmental practices.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <h2>Let’s Work Together</h2>
+      <p>
+        Open to opportunities in wastewater treatment, water reuse, HSE, environmental compliance,
+        sustainability, research, and consulting. Feel free to reach out for collaborations or roles.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:muhammadtalibrazasiddiqui@gmail.com">📧 Email</a>
+        <a href="tel:03131283384">📞 0313 128 3384</a>
+        <a href="https://www.linkedin.com/in/muhammad-talib-raza-aa32b0311" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a href="https://orcid.org/0009-0000-4216-3279" target="_blank" rel="noopener">🆔 ORCID</a>
+        <a href="https://www.researchgate.net/profile/Muhammad-Raza-324" target="_blank" rel="noopener">🔬 ResearchGate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Muhammad Talib Raza · Environmental Engineer · Built with care for a sustainable future.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
